@@ -1,4 +1,15 @@
----
+jobs:
+  job1:
+    env: &env_vars # Define the anchor on first use
+      NODE_ENV: production
+      DATABASE_URL: {% raw %}${{ secrets.DATABASE_URL }}{% endraw %}
+    steps:
+      - run: echo "Using production settings"
+
+  job2:
+    env: *env_vars # Reuse the environment variables
+    steps:
+      - run: echo "Same environment variables here"---
 title: Reusing workflow configurations
 shortTitle: Reusing workflow configurations
 intro: Find information about avoiding duplication when creating a workflow by reusing existing workflows{% ifversion fpt or ghec %} and using YAML anchors and aliases{% endif %}.
