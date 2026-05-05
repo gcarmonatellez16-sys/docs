@@ -1,3 +1,9 @@
+<details>
+<summary>My top THINGS-TO-RANK</summary>
+
+YOUR TABLE
+
+</details>
 ---
 title: Quickstart for writing on GitHub
 intro: 'Learn advanced formatting features by creating a README for your {% data variables.product.prodname_dotcom %} profile.'
